@@ -8,57 +8,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="generateWord()">
     <div id="main">
         <div id="life">
             <div id="health"></div>
         </div>
 
-        <div id="word">
-            <!-- <div class="letter letter-active"><span>C</span></div>
-            <div class="letter"><span></span></div>
-            <div class="letter"><span>G</span></div>
-            <div class="letter"><span>Á</span></div>
-            <div class="letter"><span>N</span></div>
-            <div class="letter"><span>Y</span></div> -->
-        </div>
+        <div id="word"></div>
 
         <div id="keyboard">
-            <div class="key" onclick="letterClick('A')"><span>A</span></div>
-            <div class="key" onclick="letterClick('Á')"><span>Á</span></div>
-            <div class="key" onclick="letterClick('B')"><span>B</span></div>
-            <div class="key" onclick="letterClick('C')"><span>C</span></div>
-            <div class="key" onclick="letterClick('D')"><span>D</span></div>
-            <div class="key" onclick="letterClick('E')"><span>E</span></div>
-            <div class="key" onclick="letterClick('É')"><span>É</span></div>
-            <div class="key" onclick="letterClick('F')"><span>F</span></div>
-            <div class="key" onclick="letterClick('G')"><span>G</span></div>
-            <div class="key" onclick="letterClick('H')"><span>H</span></div>
-            <div class="key" onclick="letterClick('I')"><span>I</span></div>
-            <div class="key" onclick="letterClick('Í')"><span>Í</span></div>
-            <div class="key" onclick="letterClick('J')"><span>J</span></div>
-            <div class="key" onclick="letterClick('K')"><span>K</span></div>
-            <div class="key" onclick="letterClick('L')"><span>L</span></div>
-            <div class="key" onclick="letterClick('M')"><span>M</span></div>
-            <div class="key" onclick="letterClick('N')"><span>N</span></div>
-            <div class="key" onclick="letterClick('O')"><span>O</span></div>
-            <div class="key" onclick="letterClick('Ó')"><span>Ó</span></div>
-            <div class="key" onclick="letterClick('Ö')"><span>Ö</span></div>
-            <div class="key" onclick="letterClick('Ő')"><span>Ő</span></div>
-            <div class="key" onclick="letterClick('P')"><span>P</span></div>
-            <div class="key" onclick="letterClick('Q')"><span>Q</span></div>
-            <div class="key" onclick="letterClick('R')"><span>R</span></div>
-            <div class="key" onclick="letterClick('S')"><span>S</span></div>
-            <div class="key" onclick="letterClick('T')"><span>T</span></div>
-            <div class="key" onclick="letterClick('U')"><span>U</span></div>
-            <div class="key" onclick="letterClick('Ú')"><span>Ú</span></div>
-            <div class="key" onclick="letterClick('Ü')"><span>Ü</span></div>
-            <div class="key" onclick="letterClick('Ű')"><span>Ű</span></div>
-            <div class="key" onclick="letterClick('V')"><span>V</span></div>
-            <div class="key" onclick="letterClick('W')"><span>W</span></div>
-            <div class="key" onclick="letterClick('X')"><span>X</span></div>
-            <div class="key" onclick="letterClick('Y')"><span>Y</span></div>
-            <div class="key" onclick="letterClick('Z')"><span>Z</span></div>
+            <div class="key" onclick="letterClick('A')" id="buttonA"><span>A</span></div>
+            <div class="key" onclick="letterClick('Á')" id="buttonÁ"><span>Á</span></div>
+            <div class="key" onclick="letterClick('B')" id="buttonB"><span>B</span></div>
+            <div class="key" onclick="letterClick('C')" id="buttonC"><span>C</span></div>
+            <div class="key" onclick="letterClick('D')" id="buttonD"><span>D</span></div>
+            <div class="key" onclick="letterClick('E')" id="buttonE"><span>E</span></div>
+            <div class="key" onclick="letterClick('É')" id="buttonÉ"><span>É</span></div>
+            <div class="key" onclick="letterClick('F')" id="buttonF"><span>F</span></div>
+            <div class="key" onclick="letterClick('G')" id="buttonG"><span>G</span></div>
+            <div class="key" onclick="letterClick('H')" id="buttonH"><span>H</span></div>
+            <div class="key" onclick="letterClick('I')" id="buttonI"><span>I</span></div>
+            <div class="key" onclick="letterClick('Í')" id="buttonÍ"><span>Í</span></div>
+            <div class="key" onclick="letterClick('J')" id="buttonJ"><span>J</span></div>
+            <div class="key" onclick="letterClick('K')" id="buttonK"><span>K</span></div>
+            <div class="key" onclick="letterClick('L')" id="buttonL"><span>L</span></div>
+            <div class="key" onclick="letterClick('M')" id="buttonM"><span>M</span></div>
+            <div class="key" onclick="letterClick('N')" id="buttonN"><span>N</span></div>
+            <div class="key" onclick="letterClick('O')" id="buttonO"><span>O</span></div>
+            <div class="key" onclick="letterClick('Ó')" id="buttonÓ"><span>Ó</span></div>
+            <div class="key" onclick="letterClick('Ö')" id="buttonÖ"><span>Ö</span></div>
+            <div class="key" onclick="letterClick('Ő')" id="buttonŐ"><span>Ő</span></div>
+            <div class="key" onclick="letterClick('P')" id="buttonP"><span>P</span></div>
+            <div class="key" onclick="letterClick('Q')" id="buttonQ"><span>Q</span></div>
+            <div class="key" onclick="letterClick('R')" id="buttonR"><span>R</span></div>
+            <div class="key" onclick="letterClick('S')" id="buttonS"><span>S</span></div>
+            <div class="key" onclick="letterClick('T')" id="buttonT"><span>T</span></div>
+            <div class="key" onclick="letterClick('U')" id="buttonU"><span>U</span></div>
+            <div class="key" onclick="letterClick('Ú')" id="buttonÚ"><span>Ú</span></div>
+            <div class="key" onclick="letterClick('Ü')" id="buttonÜ"><span>Ü</span></div>
+            <div class="key" onclick="letterClick('Ű')" id="buttonŰ"><span>Ű</span></div>
+            <div class="key" onclick="letterClick('V')" id="buttonV"><span>V</span></div>
+            <div class="key" onclick="letterClick('W')" id="buttonW"><span>W</span></div>
+            <div class="key" onclick="letterClick('X')" id="buttonX"><span>X</span></div>
+            <div class="key" onclick="letterClick('Y')" id="buttonY"><span>Y</span></div>
+            <div class="key" onclick="letterClick('Z')" id="buttonZ"><span>Z</span></div>
+        </div>
+
+        <div id="alert">
+            <h1 id="alertText">asd</h1>
+            <h3 id="countdown">10</h3>
         </div>
     </div>
 

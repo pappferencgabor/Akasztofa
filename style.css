@@ -59,3 +59,16 @@ body {
     margin: 10px;
     cursor: pointer;
 }
+.key-disabled {
+    cursor: default;
+    background-color: grey;
+}
+
+#alert {
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+#alertText {
+    color: #00ff00;
+}
